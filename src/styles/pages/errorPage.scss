@@ -1,0 +1,145 @@
+.error_page{
+max-width: 1800px;
+    margin: auto;
+    .error {
+            max-width: 2000px;
+            margin: auto;
+            @extend .flexMain;
+            margin-top: 80px;
+    
+            h1 {
+                font-size: 21em;
+                margin: 0;
+            }
+    
+            p,
+            a {
+                margin-top: 10px;
+                color: $red;
+    
+            }
+    
+            margin-bottom: 180px;
+    
+        }
+}
+@media (min-width: $laptop) {
+.error_page {
+    .error h1 {
+            font-size: 14em;
+            margin: 0;
+        }
+}
+}
+
+
+//375px
+@media (min-width: $medium) {
+    .error_page{
+            
+        padding: 20px;
+        .error{
+            h1{
+                font-size: 140px;
+                margin-bottom: 20px;
+                margin-top: 80px;
+            }
+            p{
+                font-size: 18px;
+                font-weight: 100;
+                margin-bottom: 80px;
+            }
+            a{
+                font-size: 14px;
+                font-weight: 100;
+            }
+        }
+    }
+}
+
+//375px
+@media (max-width: $medium) {
+    .error_page {
+
+        padding: 10px;
+
+        .error {
+            h1 {
+                font-size: 100px;
+                margin-bottom: 20px;
+                margin-top: 80px;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 100;
+                margin-bottom: 80px;
+            }
+
+            a {
+                font-size: 14px;
+                font-weight: 100;
+            }
+        }
+    }
+}
+
+//425px
+@media (min-width: $large) {
+    .error_page {
+        padding: 10px;
+        .error {
+            
+            h1 {
+                font-size: 220px;
+                margin-bottom: 20px;
+                margin-top: 80px;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 100;
+                margin-bottom: 80px;
+            }
+
+            a {
+                font-size: 14px;
+                font-weight: 100;
+            }
+        }
+    }
+
+}
+//768px
+@media (min-width: $tablet) {
+    .error_page {
+        padding: 10px;
+
+        .error h1 {
+            font-size: 14em;
+            margin: 0;
+        }
+    }
+}
+//1024px
+@media (min-width: $laptop) {
+    .error_page {
+        max-width: 1240px;
+
+        .error {
+
+            h1 {
+                font-size: 400px;
+            }
+            p {
+                font-size: 36px;
+                font-weight: 100;
+                margin-bottom: 80px;
+            }
+            a {
+                font-size: 18px;
+                font-weight: 100;
+            }
+        }
+    }
+}

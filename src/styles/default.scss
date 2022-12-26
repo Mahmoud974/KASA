@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+//Afficher les couleurs
+$red:#FF6060;
+$grey: #F6F6F6;
+$white: #fff;
+//Afficher les données responsives
+$small: 320px;
+$medium: 375px;
+$large: 425px;
+$tablet: 768px;
+$laptop: 1024px;
+$laptopL: 1440px;
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: $red;
+    font-size: 22px;
+}
+//Instaurer du Flexbox
+.flexMain {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.boxFlex {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+//Instaurer une banniere d'image
+@mixin bannerImg($size, $image) {
+    height: $size;
+    margin: 60px auto;
+    background: url($image) no-repeat center;
+    background-position: 8% 48%;
+    width: 1240px;
+    position: relative;
+    border-radius: 26px;
+    margin-bottom: 25px;
+    color:$white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

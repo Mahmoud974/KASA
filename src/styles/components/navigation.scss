@@ -1,0 +1,121 @@
+.navbar {
+        @extend .boxFlex;
+        align-items: center;
+        margin: auto;
+        width: 1240px;
+        margin-top: 30px;
+
+.list-pages {
+        @extend .boxFlex;
+        list-style: none;
+
+        li a {
+
+            text-decoration: none;
+            color: $red;
+            margin-left: 50px;
+            font-weight: 100;
+        }
+li a.nav-active {
+        text-decoration: underline;
+
+            }
+        }
+    }
+//375px MIN
+@media (min-width: $medium) {
+.navbar {
+        width: 100%;
+        margin-top: 0px;
+        padding: 20px 0;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 12px;
+
+        svg {
+            width: 145px;
+        }
+
+        .list-pages {
+            padding-left: 20px;
+
+            li a {
+                margin-left: 27px;
+            }
+        }
+    }
+
+}
+
+//375px MAX
+@media (max-width: $medium) {
+    .navbar {
+        width: 100%;
+        margin-top: 0px;
+        padding: 20px 0;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 12px;
+
+        svg {
+            width: 145px;
+        }
+
+        .list-pages {
+            padding-left: 3px;
+
+            li a {
+                margin-left: 11px;
+            }
+        }
+    }
+
+}
+//320px
+@media (max-width: $small) {
+.navbar {
+    padding: 20px 0;
+    margin-top: 0;
+    align-items: center;
+    width: 100%;
+svg {
+        width: 110px;
+    }
+.list-pages li a {
+        margin-left: 17px;
+        font-size: 10px;
+        text-transform: none;
+    }
+    }
+}
+
+//768px
+@media (min-width: $tablet) {
+.navbar {
+    padding: 20px 0;
+    margin-top: 0;
+    align-items: center;
+    width: 100%;
+svg {
+    width: 210px;
+}
+.list-pages li a {
+    margin-left: 17px;
+    font-size: 24px;
+    text-transform: none;
+}
+    }
+}
+//1024px
+@media(min-width: $laptop) {
+.navbar {
+    svg {
+            width: 210px;
+        }
+    font-size: 24px;
+    text-transform: none;
+}
+}
+

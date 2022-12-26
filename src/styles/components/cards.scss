@@ -1,0 +1,31 @@
+.boxAbout {
+    text-align: start;
+    @extend .flexMain;
+    margin: auto;
+
+    max-width: 1600px;
+.list-cards{
+    
+    width: 80%;
+.card {
+    h1 {
+        font-weight: normal;
+    }
+
+    p {
+        font-size: "Montserrat";
+        font-weight: 100;
+        width: auto;
+        background: $grey;
+        border-radius: 5px;
+        height: auto;
+        margin: 0;
+        padding: 15px;
+
+    }
+         margin: 20px;
+ }
+    
+}
+    }
+   

@@ -1,0 +1,519 @@
+.description{
+ .collapse {
+     
+    background: $red;
+    color: $white;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+    .fa-angle-down {
+        font-size: 2em;
+            cursor: pointer;
+    }
+    .fa-angle-up {
+        font-size: 2em;
+                cursor: pointer;
+    }
+}
+    .list-description {
+    list-style: none;
+    font-weight: normal;
+    width: auto;
+    background: #F6F6F6;
+    border-radius: 5px;
+    height: 100%;
+    margin: 0;
+    padding: 15px;
+    font-weight: normal;
+    font-size: 18px;
+    }
+.bannerImgBig {
+    @include bannerImg(620px, '../img/paysage.webp');
+    filter:none;
+    }
+    .namePhoto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .informations {
+        width: 1240px;
+        margin: auto;
+        @extend .boxFlex;
+        h1 {
+                font-size: 36px;
+                font-weight: 100;
+            }
+            h2{
+                font-size: 18px;
+                    font-weight: 100;
+            }
+            p{
+        font-weight: 100;
+            }
+        .list-hashtag {
+            @extend .boxFlex;
+            width: 100%;
+            padding: 0;
+            list-style: none;
+            color: $white;
+          li {
+            font-size: 15px;
+            background: $red;
+            padding: 10px 30px;
+            border-radius: 20px;
+            display: flex;
+                align-items: center;
+            }
+        }
+
+        .customer {
+            .active-star {
+                    fill: #FF6060;
+                }
+            @extend .boxFlex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            p {
+                font-size: 18px;
+                text-align: end;
+                max-width:80px;
+            }
+
+            .circle {
+                height: 65px;
+                width: 65px;
+                background-color: $grey;
+                border-radius: 50%;
+                display: inline-block;
+                margin-left: 10px;
+            }
+            .namePhoto{
+                @extend .boxFlex;
+                margin-top: 20px;
+        
+            }
+         .rating{
+            .stars{ 
+                color:#E3E3E3;
+                font-size: 30px;
+                margin-right: -48px;
+            }
+                        .stars:active {
+                            color: $red;
+                            font-size: 30px;
+                        }
+         }
+            
+        }
+        
+    }
+        .box-contains {
+            width: 1240px;
+                margin: 0 auto;
+                padding: 0;
+                
+                
+            @extend .boxFlex;
+            .card {
+                width: 50%;
+                margin-right: 10px;
+             
+                .collapse{
+               
+                        position: relative;
+                        z-index: 12;
+                     
+                    h3 {
+                            background: $red;
+                            color: $white;
+                            font-weight: 100;
+                            border-radius: 10px;
+                            padding: 10px;
+                            margin: 0;
+                          
+                          
+                        }
+                }
+    }
+            p.active {
+                height: 150px;
+              
+            }
+        }
+        .list-tag{
+            @extend .boxFlex;
+           li{
+
+            margin-right: 10px;
+           }
+        }
+      
+        .list-equipment{
+            list-style: none;
+            font-weight: normal;
+            width: auto;
+            background: $grey;
+            border-radius: 5px;
+            height: 100%;
+            margin: 0;
+            padding: 15px;
+            font-weight: normal;
+            font-size: 18px;
+        }
+}
+
+
+//375px
+@media (min-width: $medium) {
+    .slider__active-picture {
+        width: 100%;
+        height: 255px;
+    }
+
+    .description {
+        padding: 20px;
+        margin-left: 0;
+
+        .list-equipment,
+        .list-description {
+            width: auto;
+            height: 100%;
+           
+        }
+
+      
+
+        .informations {
+            margin-top: 20px;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+
+            .customer {
+
+                display: flex;
+                justify-content:space-between;
+                flex-direction: row-reverse;
+                width: 100%;
+
+                .namePhoto {
+                    margin-top: 0px;
+                    img {
+                        margin-right: 0px;
+                    }
+                }
+
+                .rating img {
+                    width: 15%;
+
+                }
+            }
+
+            h1 {
+                font-size: 18px;
+                font-weight: 100;
+                width: 90%;
+            }
+
+            p {
+
+                font-size: 14px;
+                font-weight: 100;
+            }
+
+            .list-hashtag {
+
+                .list-tag li {
+                    padding-right: 10px;
+                    padding-left: 10px;
+                    font-size: 10px;
+                    height: auto;
+
+
+
+                }
+
+            }
+
+
+        }
+                 .box-contains {
+                     display: flex;
+                     width: 100%;
+                     flex-direction: column;
+                     justify-content: space-between;
+                     flex-wrap: wrap;
+        
+                     .card {
+        
+                         width: 100%;
+                         margin: 30px 0;
+        
+                         .collapse {
+        
+                             height: 30px;
+                             font-size: 13px;
+        
+        
+                             p,
+                             li {
+                                 font-size: 12px;
+        
+                             }
+        
+                         }
+                     }
+                 }
+        
+        
+
+
+        
+    }
+
+.description .informations .list-hashtag .list-tag li {
+        
+        height: 5px;
+        font-size: 10px;
+        text-align: center;
+      
+        display: flex;
+
+    }
+
+}
+
+//375px
+@media (max-width: $medium) {
+    .slider__active-picture {
+        width: 100%;
+        height: 255px;
+    }
+
+    .description {
+        padding: 20px;
+        margin-left: 0;
+
+        .list-equipment,
+        .list-description {
+            width: auto;
+                height: 372px;
+        }
+
+
+
+        .informations {
+            margin-top: 20px;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+
+            .customer {
+
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                width: 100%;
+
+                .namePhoto {
+                    margin-top: 0px;
+
+                    img {
+                        margin-right: 0px;
+                    }
+                }
+
+                .rating img {
+                    width: 15%;
+
+                }
+            }
+
+            h1 {
+                font-size: 18px;
+                font-weight: 100;
+                width: 90%;
+            }
+
+            p {
+
+                font-size: 14px;
+                font-weight: 100;
+            }
+
+            .list-hashtag {
+
+                .list-tag li {
+
+                    font-size: 10px;
+
+
+
+                }
+
+            }
+
+
+        }
+
+        .box-contains {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .card {
+
+                width: 100%;
+                margin: 30px 0;
+
+                .collapse {
+
+                    height: 30px;
+                    font-size: 13px;
+
+
+                    p,
+                    li {
+                        font-size: 12px;
+
+                    }
+
+                }
+            }
+        }
+
+
+
+
+
+    }
+
+.description .informations .list-hashtag .list-tag li {
+
+        height: 5px;
+        font-size: 10px;
+        text-align: center;
+
+        display: flex;
+
+    }
+
+}
+//1024px
+@media (min-width: $laptop) {
+.description {
+    max-width: 1240px;
+    margin: auto;
+
+    .informations {
+        .customer {
+         
+                flex-direction: column;
+                align-items: flex-end;
+            }
+        .list-hashtag .list-tag li {
+                padding-right: 30px;
+                    padding-left: 30px;
+                font-size: 14px;
+               
+            }
+         
+    flex-direction: row;
+            h1 {
+                font-size: 36px;
+                font-weight: 100;
+                    width: 100%;
+                    margin: 0;
+            }
+        p{
+            font-size: 18px;
+        }
+        
+        }
+
+    .slider__active-picture {
+            width: 100%;
+            height: 415px;
+        }
+    .box-contains {
+            display: flex;
+            width: 100%;
+            font-size: 18px;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+         .card{
+            margin-top: 10px;
+         }
+            .card:nth-child(2){
+           margin-left: 20px;
+            }
+    
+        }
+}
+}
+//768px
+@media (min-width: $tablet) {
+    .description .box-contains {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        .card:nth-child(1){
+            margin-right: 10px;
+        }
+       .list-description,.list-equipment{
+        padding-bottom: 90px;
+        height: auto;
+        }
+        p{
+            margin: 0;
+        }
+    }
+}
+@media (max-width: $small) {
+    .description{
+        .informations {
+       
+            h1 {
+                    font-size: 18px;
+                    font-weight: 100;
+                    width: 100%;
+                }
+                .customer{
+                    flex-direction: column;
+                    
+                    
+                }
+          
+        }
+        
+        
+  
+        .list-hashtag .list-tag{
+            text-align: center;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           li{
+            margin-bottom: 10px;
+           }
+        }
+       
+    }
+}
