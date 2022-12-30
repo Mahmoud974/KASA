@@ -69,7 +69,7 @@
             font-size: 15px;
             background: $red;
             padding: 10px 30px;
-            border-radius: 20px;
+            border-radius: 10px;
             display: flex;
                 align-items: center;
             }
@@ -308,7 +308,7 @@
         .list-equipment,
         .list-description {
             width: auto;
-                height: 372px;
+            height: auto;
         }
 
 
@@ -325,17 +325,21 @@
                 justify-content: space-between;
                 flex-direction: row-reverse;
                 width: 100%;
+                
 
                 .namePhoto {
                     margin-top: 0px;
 
                     img {
                         margin-right: 0px;
+                        width: 32px;
+                        height: 32px;
+                               
                     }
                 }
 
                 .rating img {
-                    width: 15%;
+                        width: 15px;
 
                 }
             }
@@ -357,10 +361,7 @@
                 .list-tag li {
 
                     font-size: 10px;
-
-
-
-                }
+}
 
             }
 
@@ -381,7 +382,7 @@
 
                 .collapse {
 
-                    height: 30px;
+                    height: 29.93px;
                     font-size: 13px;
 
 
@@ -406,65 +407,82 @@
         height: 5px;
         font-size: 10px;
         text-align: center;
-
         display: flex;
 
     }
 
 }
-//1024px
-@media (min-width: $laptop) {
-.description {
-    max-width: 1240px;
-    margin: auto;
+//375px
+@media (max-width: $small) {
+    .description {
+        .informations {
 
-    .informations {
-        .customer {
-         
-                flex-direction: column;
-                align-items: flex-end;
-            }
-        .list-hashtag .list-tag li {
-                padding-right: 30px;
-                    padding-left: 30px;
-                font-size: 14px;
-               
-            }
-         
-    flex-direction: row;
             h1 {
-                font-size: 36px;
+                font-size: 18px;
                 font-weight: 100;
-                    width: 100%;
-                    margin: 0;
+                width: 100%;
             }
-        p{
-            font-size: 18px;
+
+            
+
+        }
+
+
+
+        .list-hashtag .list-tag {
+            text-align: center;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+            li {
+                margin-bottom: 10px;
+                
+            }
+        }
+
+    }
+}
+@media (min-width: $small) {
+    .description{
+        .informations {
+       
+      
+                .customer{
+                    margin-top: -20px;
+                    p{
+                        font-size: 12px;
+                    }
+                    
+                }
+          
+        }
+        .box-contains{
+            .card {
+                h3 {
+                        font-size: 13px;
+                    }
+                
+                    .list-stuff li, p {
+                        font-size: 12px;
+                    }
+            }
         }
         
-        }
+        
+  
+   .list-hashtag .list-tag {
+    flex-wrap: wrap;
+ li {
+           margin-bottom: 10px;
+       }
+   }
+       
+    }
+}
 
-    .slider__active-picture {
-            width: 100%;
-            height: 415px;
-        }
-    .box-contains {
-            display: flex;
-            width: 100%;
-            font-size: 18px;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: nowrap;
-         .card{
-            margin-top: 10px;
-         }
-            .card:nth-child(2){
-           margin-left: 20px;
-            }
-    
-        }
-}
-}
+
 //768px
 @media (min-width: $tablet) {
     .description .box-contains {
@@ -473,47 +491,95 @@
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: nowrap;
-        .card:nth-child(1){
+
+        .card:nth-child(1) {
             margin-right: 10px;
         }
-       .list-description,.list-equipment{
-        padding-bottom: 90px;
-        height: auto;
+
+        .list-description,
+        .list-equipment {
+            padding-bottom: 20px;
+            height: auto;
         }
-        p{
+
+        p {
             margin: 0;
         }
     }
 }
-@media (max-width: $small) {
-    .description{
+//1024px
+@media (min-width: $laptop) {
+   
+    .description {
+        max-width: 1240px;
+        margin: auto;
+
         .informations {
-       
+            flex-direction: row;
+            .customer {
+                margin-top: 0;
+                flex-direction: column;
+                align-items: flex-end;
+               .namePhoto {
+                p{
+                font-size: 18px;
+               }
+               img{
+                height: 64px;
+                width: 64px;
+               }
+               }
+             
+
+            }
+
+            .list-hashtag .list-tag li {
+                padding-right: 30px;
+                padding-left: 30px;
+                font-size: 14px;
+
+            }
+
+            
+
             h1 {
-                    font-size: 18px;
-                    font-weight: 100;
-                    width: 100%;
-                }
-                .customer{
-                    flex-direction: column;
-                    
-                    
-                }
-          
+                font-size: 36px;
+                font-weight: 100;
+                width: 100%;
+                margin: 0;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
         }
-        
-        
-  
-        .list-hashtag .list-tag{
-            text-align: center;
-            margin: auto;
+
+        .slider__active-picture {
+            width: 100%;
+            height: 415px;
+        }
+
+        .box-contains {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-           li{
-            margin-bottom: 10px;
-           }
+            width: 100%;
+            font-size: 18px;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+
+            .card {
+                margin-top: 10px;
+                .collapse h3, p, .list-stuff li {
+                        font-size: 18px;
+                    }
+              
+            }
+
+            .card:nth-child(2) {
+                margin-left: 20px;
+            }
+
         }
-       
     }
 }

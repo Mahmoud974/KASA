@@ -32,7 +32,7 @@ const Equipement = ({ card }) => {
         className={`list-equipment  ${isActive}`}
         style={{ display: `${display}` }}
       >
-        <div>
+        <div className="list-stuff">
           {card.equipments.map((equipement, index) => {
             return <li key={index}>{equipement}</li>;
           })}
