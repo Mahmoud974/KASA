@@ -1,31 +1,40 @@
 import { useEffect, React, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+//Components
 import Footer from "../components/Footer";
 import Tag from "../components/Tag";
 import Navigation from "../components/Navigation";
-//SVG stars
-import redstar from "../img/redStar.svg";
-import greystar from "../img/greyStar.svg";
 import Caroussel from "../components/Caroussel";
 import Descriptions from "../components/Descriptions";
 import Equipement from "../components/Equipement";
+//SVG stars
+import redstar from "../img/redStar.svg";
+import greystar from "../img/greyStar.svg";
 
 //Page de description du bien
 const Description = () => {
   const [data, setData] = useState([]);
   const stars = [1, 2, 3, 4, 5];
+  const navigate = useNavigate();
+  /**
+   * Récuperer l'id avec useParams
+   */
+  const { id } = useParams();
+
   /**
    * Récuperer les données de la data articles sur le fichier JSON
    */
   useEffect(() => {
     fetch("http://localhost:3004/articles")
       .then((data) => data.json())
-      .then((data) => setData(data));
-  }, []);
-  /**
-   * Récuperer l'id avec useParams
-   */
-  const { id } = useParams();
+      .then((data) => {
+        setData(data);
+        let findId = data.find((item) => id === item.id);
+        if (!findId) {
+          navigate("/page_erreur");
+        }
+      });
+  }, [id, navigate]);
 
   return (
     <>
