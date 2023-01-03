@@ -240,8 +240,9 @@ height: 100%;
 @media (min-width: $tablet) {
 
     .home {
+
         max-width: 768px;
-        padding: 5px;
+        padding: 10px;
 
         .bannerImgDefault {
             height: 200px;
@@ -268,7 +269,9 @@ height: 100%;
                 padding-right: 0px;
                 :hover {
                        filter:grayscale(10);
+                   
                        transform: scale(1.001)
+                      
                     }
                     .card_item{
                         width: 335px;
@@ -357,6 +360,9 @@ height: 100%;
                  font-size: 17px;
                  text-shadow: 1px 1px 2px black;
                     width: 217px;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
              }
 
          }
