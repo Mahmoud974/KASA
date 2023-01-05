@@ -9,7 +9,6 @@
                 font-weight: 100;
             }
         }
-
         max-width: 1800px;
         margin: auto;
 
@@ -33,14 +32,11 @@
                     text-decoration: none;
                         
                     .card_item {
-                        
-                   
                         color: white;
                         padding: 1rem;
-
                         height: 340px;
                         border-radius: 20px;
-
+                   
                         h2 {
                             display: flex;
                             margin-top: 85%;
@@ -139,7 +135,9 @@
                 justify-content: center;
                 padding-bottom: 0;
                 margin: auto;
-              
+              h2{
+                font-size: 18px;
+              }
                   
 
                 .card_item {
