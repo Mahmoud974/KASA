@@ -6,7 +6,9 @@ const Cards = ({ item }) => {
     <NavLink to={`/description/${item.id}`}>
       <li
         className="card_item"
-        style={{ backgroundImage: `url(${item.cover})` }}
+        style={{
+          background: `url(${item.cover})`,
+        }}
       >
         <h2>{item.title}</h2>
       </li>

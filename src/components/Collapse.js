@@ -1,38 +1,50 @@
 import { React, useState } from "react";
 
-//Composant collapse about
-const Collapse = ({ card }) => {
+const Collapse = ({ card, title, blocs, cardAbout, aboutAccess }) => {
+  const [collapse, setCollapse] = useState(false);
   const [display, setDisplay] = useState("none");
   const [isActive, setIsActive] = useState("");
   const [rotate, setRotate] = useState("180deg");
-  const [arrow, setArrow] = useState(true);
 
   /**
-   * Actionner le collapse d'about dynamiquement
+   * Actionner le collapse du produit descriptif
    */
   const inputCollapse = () => {
     setIsActive(isActive === "" ? "active" : "");
     setRotate(rotate === "180deg" ? "0deg" : "180deg");
     setDisplay(display === "block" ? "none" : "block");
-    setArrow(!arrow);
+    setCollapse(!collapse);
   };
-
   return (
     <div className="card">
       <div className="collapse">
-        <h1>{card.title}</h1>
+        {aboutAccess ? <h1> {cardAbout.title}</h1> : <h3> {title}</h3>}
+
         <i
           className={
-            arrow
-              ? "fa-sharp fa-solid fa-angle-down"
-              : "fa-sharp fa-solid fa-angle-up"
+            collapse
+              ? "fa-sharp fa-solid fa-angle-up"
+              : "fa-sharp fa-solid fa-angle-down"
           }
           onClick={() => inputCollapse()}
         ></i>
       </div>
-      <p className={`texte ${isActive}`} style={{ display: `${display}` }}>
-        {card.content}
-      </p>
+      <div
+        className={`list-description ${isActive}`}
+        style={{ display: `${display}` }}
+      >
+        {aboutAccess ? (
+          <p className={`texte ${isActive}`} style={{ display: `${display}` }}>
+            {cardAbout.content}
+          </p>
+        ) : blocs ? (
+          card.map((equipement, index) => {
+            return <li key={index}>{equipement}</li>;
+          })
+        ) : (
+          <p>{card}</p>
+        )}
+      </div>
     </div>
   );
 };

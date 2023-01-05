@@ -5,11 +5,10 @@ import Footer from "../components/Footer";
 import Tag from "../components/Tag";
 import Navigation from "../components/Navigation";
 import Caroussel from "../components/Caroussel";
-import Descriptions from "../components/Descriptions";
-import Equipement from "../components/Equipement";
 //SVG stars
 import redstar from "../img/redStar.svg";
 import greystar from "../img/greyStar.svg";
+import Collapse from "../components/Collapse";
 
 //Page de description du bien
 const Description = () => {
@@ -95,8 +94,16 @@ const Description = () => {
                 </div>
 
                 <div className="box-contains">
-                  <Descriptions card={card} />
-                  <Equipement card={card} />
+                  <Collapse
+                    card={card.description}
+                    title="Description"
+                    blocs={false}
+                  />
+                  <Collapse
+                    card={card.equipments}
+                    title="Equipements"
+                    blocs={true}
+                  />
                 </div>
               </div>
             </div>

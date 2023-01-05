@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import Collapse from "../components/Collapse";
+
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
 import { dataAbout } from "../data/dataAbout";
@@ -17,7 +18,7 @@ const About = () => {
         <div className="boxAbout">
           <div className="list-cards">
             {data[0].map((card, index) => (
-              <Collapse card={card} key={index} />
+              <Collapse cardAbout={card} key={index} aboutAccess={true} />
             ))}
           </div>
         </div>
